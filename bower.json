@@ -1,0 +1,22 @@
+{
+    "name": "manifesto-handlebars-demo",
+    "version": "0.0.2",
+    "homepage": "https://github.com/edsilv/manifesto-site",
+    "authors": [
+        "edsilv <e.silverton@gmail.com>"
+    ],
+    "description": "Test manifesto",
+    "main": "app.js",
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "manifesto": "edsilv/manifesto",
+        "jquery": "~2.1.4"
+    }
+}
