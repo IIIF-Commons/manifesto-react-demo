@@ -1,32 +1,28 @@
 var React = require('react');
 var Layout = require('./layout');
 
-// Contrived example to show how one might use Flow type annotations
-function countTo(n:number):string {
-  var a = [];
-  for (var i = 0; i < n; i++ ) {
-    a.push(i + 1);
-  }
-  return a.join(', ');
-}
-
 var Index = React.createClass({
-  propTypes: {
-    title: React.PropTypes.string
-  },
+    propTypes: {
+        title: React.PropTypes.string
+    },
 
-  render: function() {
-    return (
-      <Layout title={this.props.title}>
-        <h1>{this.props.title}</h1>
-        <p>Welcome to {this.props.title}</p>
-        <p>
-          I can count to 10:
-          {countTo(10)}
-        </p>
-      </Layout>
-    );
-  }
+    render: function() {
+        return (
+            <Layout title={this.props.title}>
+                <h1>{this.props.title}</h1>
+                <div>
+                    <input id="manifest" type="text" placeholder="Manifest Uri" value="http://localhost:3000/data/manifest.json" />
+                    <button id="load-client-btn">Load (Client)</button>
+                    <button id="load-server-btn">Load (Server)</button>
+                    <br/><br/>
+                </div>
+
+                <div id="manifest-txt">
+
+                </div>
+            </Layout>
+        );
+    }
 });
 
 module.exports = Index;
