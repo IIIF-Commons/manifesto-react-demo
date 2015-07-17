@@ -28,7 +28,7 @@
     "react-tools": "^0.12.2",
     "express": "3.3.5",
     "react": "^0.13.0",
-    "manifesto": "edsilv/manifesto.git"
+    "manifesto": "edsilv/manifesto"
   },
   "devDependencies": {
     "async": "^0.9.0",
