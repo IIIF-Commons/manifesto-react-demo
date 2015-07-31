@@ -6,7 +6,9 @@ exports.load = function(req, res){
 
     manifesto.load(url, function(manifest) {
 
-        manifest = manifesto.parse(manifest);
+        manifest = manifesto.create(manifest);
+
+        var tree = manifest.getTree();
 
         res.render('load', {
             title: manifest.getLabel()

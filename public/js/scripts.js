@@ -4,7 +4,7 @@ $(function() {
         e.preventDefault();
         var manifestUri = $('#manifest').val();
         manifesto.load(manifestUri, function(manifest){
-            manifest = manifesto.parse(manifest);
+            manifest = manifesto.create(manifest);
             $('#manifest-txt').append(manifest.getLabel());
         });
     });
