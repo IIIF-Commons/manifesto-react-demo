@@ -8,8 +8,6 @@ exports.load = function(req, res){
 
         manifest = manifesto.create(manifest);
 
-        var tree = manifest.getTree();
-
         res.render('load', {
             title: manifest.getLabel()
         });
