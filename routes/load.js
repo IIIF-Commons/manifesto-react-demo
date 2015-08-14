@@ -4,7 +4,7 @@ exports.load = function(req, res){
 
     var url = decodeURIComponent(req.params.url);
 
-    manifesto.load(url, function(manifest) {
+    manifesto.loadManifest(url).then(function(manifest) {
 
         manifest = manifesto.create(manifest);
 

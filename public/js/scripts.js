@@ -2,8 +2,8 @@ $(function() {
 
     $('#load-client-btn').on('click', function(e) {
         e.preventDefault();
-        var manifestUri = $('#manifest').val();
-        manifesto.load(manifestUri, function(manifest){
+        var url = $('#manifest').val();
+        manifesto.loadManifest(url).then(function(manifest){
             manifest = manifesto.create(manifest);
             $('#manifest-txt').append(manifest.getLabel());
         });
